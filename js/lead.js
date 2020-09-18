@@ -190,6 +190,8 @@ window.onscroll = function(){
 				$("#down").css("visibility","unset");
 			}
 		}
+	}else{
+		alert("移动设备！");
 	}	
 };
 //判断设备类型
