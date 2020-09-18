@@ -174,6 +174,7 @@ function gotop(){
 };
 //页面滚轮事件
 window.onscroll = function(){	
+	alert(navigator.userAgent);
 	if(!isMobile()||isChorme()){
 		let top = document.body.scrollTop = document.documentElement.scrollTop;
 		let flag = document.getElementById("back").style.visibility;
@@ -190,8 +191,6 @@ window.onscroll = function(){
 				$("#down").css("visibility","unset");
 			}
 		}
-	}else if(isMobile()){
-		alert("移动设备！");
 	}	
 };
 //判断设备类型
