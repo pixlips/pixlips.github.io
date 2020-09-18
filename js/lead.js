@@ -174,8 +174,7 @@ function gotop(){
 };
 //页面滚轮事件
 window.onscroll = function(){	
-	alert(navigator.userAgent);
-	if(!isMobile()||isChorme()){
+	if(!isMobile()||isChrome()){
 		let top = document.body.scrollTop = document.documentElement.scrollTop;
 		let flag = document.getElementById("back").style.visibility;
 		if(top>=(document.documentElement.clientHeight/5)){
@@ -202,8 +201,8 @@ function isMobile() {
     } 
 };
 //获取浏览器类型 
-function isChorme(){ 
-	if((navigator.userAgent.indexOf('AppleWebKit') != -1) || (navigator.userAgent.indexOf('Chrome') != -1)){
+function isChrome(){ 
+	if((navigator.userAgent.indexOf('Chrome') != -1)){
 	    return true; 
 	}else{ 
 	    return false; 
