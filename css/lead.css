@@ -122,14 +122,15 @@ a:hover{
 } */
 #down{
 	position: relative;
-	top: 200px;
+	height: 100%;
+	top: 600%;
 	text-align: center;
 	z-index: 5;
 	animation: downmove 1s ease-in-out 1s infinite alternate;
 }
 @keyframes downmove{
-	from{top: 200px;}
-	to{top: 280px;
+	from{top: 600%;}
+	to{top: 900%;
 	opacity: 0.5;}
 }
 #description #topic{
