@@ -205,8 +205,19 @@
 		</div>
 		<script src="js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/lead.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/click-colorful.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
+			var device = true;
+			if(!isMobile()){
+				document.write('<script type="text/javascript" charset="utf-8" src="js/click-colorful.js"><\/script>');
+				device = true;
+			}
+			if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){  
+			        device = false;
+			}else if(/iPad/i.test(navigator.userAgent)){ 
+			        device = false
+			}else {
+			        device = true;
+			}
 			function showpv(){
 				let pv = document.getElementById("pv");
 				if(pv.style.display =="none"){
@@ -216,15 +227,19 @@
 				}
 			}
 			function playColor(e){
-				console.log(e)
-				var color = new colorBall()
-				color.fly(e.clientX, e.clientY)
+				if(device){
+					console.log(e)
+					var color = new colorBall()
+					color.fly(e.clientX, e.clientY)
+				}				
 			}
 			function toucuPlayColor(e) {
-				var color = new colorBall()
-				color.fly(e.changedTouches[0].clientX,e.changedTouches[0].clientY);
-				e.stopPropagation()
-				e.preventDefault()
+				if(device){
+					var color = new colorBall()
+					color.fly(e.changedTouches[0].clientX,e.changedTouches[0].clientY);
+					e.stopPropagation()
+					e.preventDefault()	
+				}
 			}
 		</script>
 	</body>
