@@ -190,7 +190,7 @@ window.onscroll = function(){
 				$("#down").css("visibility","unset");
 			}
 		}
-	}else{
+	}else if(isMobile()){
 		alert("移动设备！");
 	}	
 };
