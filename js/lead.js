@@ -202,11 +202,11 @@ function isMobile() {
 };
 //获取浏览器类型 
 function isChrome(){ 
-	if((navigator.userAgent.indexOf('Chrome') != -1)){
-	    return true; 
+	if((navigator.userAgent.indexOf('Chrome') != -1)&&(navigator.userAgent.indexOf('QQ') == -1)){
+		return true; 
 	}else{ 
 	    return false; 
-	} 
+	}  
 };
 //移动事件动画
 function move(t){
