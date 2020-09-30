@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<title>导航</title>
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-GYCWPMS9WR"></script>
 		<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-GYCWPMS9WR');</script>
 		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TRKFXH3');</script>
+		<meta charset="utf-8">
+		<title>导航</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<!-- <meta http-equiv="refresh" content="1;url=https://pixlips.tk"> -->
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 		<link rel="bookmark" href="img/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="css/lead.css"/>
 	</head>
 	<body onload="write();set(animation);set(comic);set(game);set(novel);set(image);set(software);set(website);set(crx);addfun();set(tm);" ontouchstart="toucuPlayColor(event)" onclick="playColor(event)">
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TRKFXH3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		<div id="bg">
+		<div id="bg" class="swbg">
 			<div id="top">
 				<div id="img">
-					<img src="img/i-img.png" alt="头像">
+					<img src="img/i-img.png" alt="头像" title="点击切换背景" onclick="swbg()">
 				</div>
 				<!-- <div id="top-l" style="text-align: center;line-height: 32px;">Pixiv Lips:</div> -->
 				<div id="top-r"></div>
@@ -205,10 +206,27 @@
 		</div>
 		<script src="js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/lead.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
+		<script type="text/javascript">	
+			let sw = Math.random();
+			if(sw<=0.25){
+				swbg();
+			}
+			function swbg(){
+				let num = Math.floor(Math.random()*10)+1;
+				var bg = $("#bg");
+				if(isMobile()){
+					bg.append("<style>#bg::before{background:transparent url(img/lead/mbg"+num+".jpg) center center no-repeat;background-size:cover;}</style>");
+				}else{
+					bg.append("<style>#bg::before{background:transparent url(img/lead/bg"+num+".jpg) center center no-repeat;background-size:cover;}</style>");
+				}				
+			}
 			var device = true;
 			if(!isMobile()){
 				document.write('<script type="text/javascript" charset="utf-8" src="js/click-colorful.js"><\/script>');
+				device = true;
+			}
+			if(navigator.userAgent.indexOf("Mobile")!=-1){
+				$("#content").style.backgroundImage="url(../img/lead/mbg.jpg)";
 			}
 			if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){  
 			        device = false;
@@ -224,7 +242,7 @@
 					color.fly(e.clientX, e.clientY)
 				}				
 			}
-			function toucuPlayColor(e) {
+			function toucuPlayColor(e){
 				if(device){
 					var color = new colorBall()
 					color.fly(e.changedTouches[0].clientX,e.changedTouches[0].clientY);
