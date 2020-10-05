@@ -26,7 +26,7 @@ a:hover{
 	width:100%;
 	height:100%;
 	background-attachment: fixed;
-	background:transparent url(../img/lead/bg1.jpg) center center no-repeat;
+	background:transparent url(https://i.loli.net/2020/10/05/H9zeGsK5D7OSCT6.jpg) center center no-repeat;
 	filter:blur(5px) brightness(0.7);
 	background-size:cover;
 }
@@ -41,7 +41,7 @@ a:hover{
 	position: relative;
 	width: 100%;
 	height: auto;
-	background-image: url(../img/lead/bg.jpg);
+	background-image: url(https://i.loli.net/2020/10/05/8y1ZERkqhlFUnGj.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -63,8 +63,8 @@ a:hover{
 }
 #img img{
 	margin: 0 auto;
-	width: 128px;
-	height: 128px;
+	width: 110px;
+	height: 110px;
 	margin-bottom: 64px;
 	transition: all 0.7s ease-in-out;
 	border-radius: 70px;
@@ -195,6 +195,8 @@ a:hover{
 	position: relative;
 	bottom: 2px;
 	margin: 0 10px 0 4px;
+	border-right: 1px dotted white;
+	border-radius: 5px;
 }
 #items ul li .tag{
 	display: inline-block;
