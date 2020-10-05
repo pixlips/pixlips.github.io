@@ -238,21 +238,23 @@
 				document.write('<script type="text/javascript" charset="utf-8" src="js/click-colorful.js"><\/script>');
 				device = true;
 			}else{				
+				device = false;
 				let items = document.getElementsByClassName("item");
 				for (let i = 0; i < items.length; i++) {
 					items[i].style.width="200px";
 				}
+				alert("移动端！");
 			}
 			if(navigator.userAgent.indexOf("Mobile")!=-1){
 				$("#content")[0].style.backgroundImage="url(img/lead/mbg.jpg)";
 			}
-			if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){  
-			        device = false;
-			}else if(/iPad/i.test(navigator.userAgent)){ 
-			        device = false
-			}else {
-			        device = true;
-			}
+// 			if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){  
+// 			        device = false;
+// 			}else if(/iPad/i.test(navigator.userAgent)){ 
+// 			        device = false
+// 			}else {
+// 			        device = true;
+// 			}
 			function playColor(e){
 				if(device){
 					console.log(e)
