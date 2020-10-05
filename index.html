@@ -12,7 +12,7 @@
 		<link rel="bookmark" href="img/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" type="text/css" href="css/lead.css"/>
 	</head>
-	<body onload="set(animation);set(comic);set(game);set(novel);set(image);set(software);set(website);set(crx);addfun();set(tm);write();" ontouchstart="toucuPlayColor(event)" onclick="playColor(event)">
+	<body onload="set(animation);set(comic);set(game);set(novel);set(image);set(software);set(website);set(crx);addfun();write();set(tm);" ontouchstart="toucuPlayColor(event)" onclick="playColor(event)">
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TRKFXH3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<div id="bg" class="swbg">
 			<div id="top">
@@ -109,6 +109,7 @@
 							<div class="all tag">全部</div>
 							<div class="down tag">原创</div>
 							<div class="online tag">赞助</div>
+							<div class="wallpaper tag">壁纸</div>
 							<div class="novel tag">其他</div>
 						</div>
 						<div class="icon" onclick="managerItem(this)" title="close">
@@ -208,22 +209,39 @@
 		<script src="js/lead.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">	
 			let sw = Math.random();
-			if(sw<=0.25){
+			var bg = $("#bg");
+			if(sw<=0.2){
 				swbg();
+			}else if(sw>=0.9){
+				if(isMobile()){
+					bg.append("<style>#bg::before{background:transparent url(https://i.loli.net/2020/10/05/WwE2xe9QVIGdurS.jpg) center center no-repeat;background-size:cover;}</style>");
+				}else{
+					bg.append("<style>#bg::before{background:transparent url(https://i.loli.net/2020/10/05/94CVOfRay5p8utz.jpg) center center no-repeat;background-size:cover;}</style>");
+				}
+			}else if(sw<=0.3){
+				if(isMobile()){
+					bg.append("<style>#bg::before{background:transparent url(https://i.loli.net/2020/10/05/jAwg9ROmWvicIrT.jpg) center center no-repeat;background-size:cover;}</style>");
+				}else{
+					bg.append("<style>#bg::before{background:transparent url(https://i.loli.net/2020/10/05/yc7Vuv8tWdJSTwN.jpg) center center no-repeat;background-size:cover;}</style>");
+				}
 			}
 			function swbg(){
-				let num = Math.floor(Math.random()*10)+1;
-				var bg = $("#bg");
+				let num = Math.floor(Math.random()*100);
 				if(isMobile()){
-					bg.append("<style>#bg::before{background:transparent url(img/lead/mbg"+num+".jpg) center center no-repeat;background-size:cover;}</style>");
+					bg.append("<style>#bg::before{background:transparent url(https://api.imlazy.ink/img-phone/?num="+num+") center center no-repeat;background-size:cover;}</style>");
 				}else{
-					bg.append("<style>#bg::before{background:transparent url(img/lead/bg"+num+".jpg) center center no-repeat;background-size:cover;}</style>");
+					bg.append("<style>#bg::before{background:transparent url(https://api.imlazy.ink/img/?num="+num+") center center no-repeat;background-size:cover;}</style>");
 				}				
 			}
 			var device = true;
 			if(!isMobile()){
 				document.write('<script type="text/javascript" charset="utf-8" src="js/click-colorful.js"><\/script>');
 				device = true;
+			}else{				
+				let items = document.getElementsByClassName("item");
+				for (let i = 0; i < items.length; i++) {
+					items[i].style.width="200px";
+				}
 			}
 			if(navigator.userAgent.indexOf("Mobile")!=-1){
 				$("#content")[0].style.backgroundImage="url(img/lead/mbg.jpg)";
