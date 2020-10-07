@@ -30,6 +30,19 @@ a:hover{
 	background:transparent url(https://i.loli.net/2020/10/05/H9zeGsK5D7OSCT6.jpg) center center no-repeat;
 	filter:blur(5px) brightness(0.7);
 	background-size:cover;
+	transform: scale(1);
+	/* animation: move ease 30s infinite alternate; */
+}
+@keyframes move{
+    0{
+		transform: scale(1);
+	}
+	20%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.05);
+    }
 }
 #content{
 	position: relative;
@@ -146,6 +159,13 @@ a:hover{
 }
 #description #topic p{
 	
+}
+.fireworks{
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	pointer-events: none;
 }
 #items{
 	width: 900px;
