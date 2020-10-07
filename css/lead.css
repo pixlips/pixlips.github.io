@@ -35,7 +35,7 @@ a:hover{
 	position: relative;
 	width: 100%;
 	height: auto;
-	min-width: 900px;
+	min-width: 1000px;
 	background-image: url(https://i.loli.net/2020/10/05/8y1ZERkqhlFUnGj.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -250,6 +250,15 @@ a:hover{
 	.item{
 		width: 200px;
 		font-size: x-large;
+	}
+	#top{
+		width: 1000px;
+	}
+	#other{
+		width: 1000px;
+	}
+	#bg{
+		min-height: 100%;
 	}
 }
 .item:hover{
