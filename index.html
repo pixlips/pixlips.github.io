@@ -237,14 +237,11 @@
 			var device = true;
 			if(!isMobile()){
 				document.write('<script type="text/javascript" charset="utf-8" src="js/click-colorful.js"><\/script>');
-				$("#content")[0].style.backgroundImage="url(https://i.loli.net/2020/10/05/8y1ZERkqhlFUnGj.jpg)";
+// 				$("#content")[0].style.backgroundImage="url(https://i.loli.net/2020/10/05/8y1ZERkqhlFUnGj.jpg)";
 				device = true;
 			}else{				
 				device = false;
-				let items = document.getElementsByClassName("item");
-				for (let i = 0; i < items.length; i++) {
-					items[i].style.width="150%";
-				}
+				$("#bg")[0].style.height=window.outerHeight;
 			}
 // 			if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){  
 // 			        device = false;
