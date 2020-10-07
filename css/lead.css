@@ -25,18 +25,18 @@ a:hover{
 	left:0;
 	width:100%;
 	height:100%;
+	min-height: 100%;
 	background-attachment: fixed;
 	background:transparent url(https://i.loli.net/2020/10/05/H9zeGsK5D7OSCT6.jpg) center center no-repeat;
 	filter:blur(5px) brightness(0.7);
 	background-size:cover;
 }
 #content{
-/* 	background-color: white; */
 	position: relative;
+	min-width: 1000px;
 	width: 100%;
 	height: auto;
-	min-width: 1000px;
-/* 	background-image: url(https://i.loli.net/2020/10/05/8y1ZERkqhlFUnGj.jpg); */
+	/* background-image: url(https://i.loli.net/2020/10/05/8y1ZERkqhlFUnGj.jpg); */
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -153,7 +153,7 @@ a:hover{
 	margin: 0 auto;
 	position: relative;
 	top: 0px;
-	border-radius: 5px;
+	border-radius: 40px;
 	box-shadow: 0 -5px 20px 5px rgb(124,92,51);
 }
 #items ul{
@@ -180,7 +180,7 @@ a:hover{
 	display: inline-block;
 	text-align: center;
 	line-height: 32px;
-	border-radius: 20px 0 0 0;
+	border-radius: 40px 0 0 0;
 }
 #items ul li .tags{
 	display: inline-block;
@@ -224,13 +224,45 @@ a:hover{
 .items-ul-li{
 	border: 1px rgb(252,202,110) dotted;
 	background-color: rgba(0,0,0,0.3);
-	border-radius: 20px;
+	border-radius: 40px;
 	transition: all 0.5s;
 	min-height: 64px;
+	box-shadow: 0 3px 3px rgba(0,0,0,0.5);
+	z-index: 2;
 }
 .items-ul-li:hover{
-	background-color: rgba(0,0,0,0.7);
+	background-color: rgba(0,0,0,0.7);	
 	cursor: pointer;
+}
+.items-ul-li::after{
+	content: "";
+	position: absolute;
+	border-radius: 40px;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	box-shadow: 0 10px 7px rgba(0,0,0,1.1);
+	opacity: 0;
+}
+.items-ul-li::before{
+	content: "";
+	position: absolute;
+	border-radius: 40px;
+	width: 100%;
+	height: 100%;	
+	z-index: -1;
+	top: 0;
+	left: 0;
+	box-shadow: 0 7px 7px rgba(0,0,0,1);
+	opacity: 0;
+}
+.items-ul-li:hover::before{
+	opacity: 0;
+}
+.items-ul-li:hover::after{
+	opacity: 1;
 }
 .items-ul-li:hover .type{
 	background-color: rgb(206,125,69);
@@ -241,9 +273,11 @@ a:hover{
 	color: white;
 }
 .item{
-	width: 130px;
+	width: 130px;	
+	border: 2px solid rgba(255,255,255,0);
 	text-align: center;
-	border-bottom: 2px rgba(255,255,255,0.05) dotted;
+	border-radius: 10px;
+	/* border-bottom: 2px rgba(255,255,255,0.05) dotted; */
 	transition: all 0.5s;
 }
 @media only screen and (max-width:768px) {
@@ -261,7 +295,8 @@ a:hover{
 		min-height: 100%;
 	}
 }
-.item:hover{
+.item:hover{	
+	border: 2px solid rgba(255,255,255,0.5);
 	border-bottom: 2px rgb(252,202,110) dotted;
 }
 .item a{
