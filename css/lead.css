@@ -31,12 +31,12 @@ a:hover{
 	background-size:cover;
 }
 #content{
-	background-color: white;
+/* 	background-color: white; */
 	position: relative;
 	width: 100%;
 	height: auto;
 	min-width: 1000px;
-	background-image: url(https://i.loli.net/2020/10/05/8y1ZERkqhlFUnGj.jpg);
+/* 	background-image: url(https://i.loli.net/2020/10/05/8y1ZERkqhlFUnGj.jpg); */
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
