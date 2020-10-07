@@ -30,12 +30,6 @@ a:hover{
 	filter:blur(5px) brightness(0.7);
 	background-size:cover;
 }
-.swbg01::before{
-	background:transparent url(../img/bg01.jpg) center center no-repeat;
-}
-.swbg02::before{
-	background:transparent url(../img/bg02.jpg) center center no-repeat;
-}
 #content{
 	background-color: white;
 	position: relative;
@@ -250,6 +244,11 @@ a:hover{
 	text-align: center;
 	border-bottom: 2px rgba(255,255,255,0.05) dotted;
 	transition: all 0.5s;
+}
+@media only screen and (max-width:768px) {
+	.item{
+		width: 200px;
+	}
 }
 .item:hover{
 	border-bottom: 2px rgb(252,202,110) dotted;
