@@ -2,118 +2,83 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>测试页面( •̥́ ˍ •̀ू )</title>
+		<title>网站标题</title>
 	</head>
 	<body>
 		<style type="text/css">
-			body{
-				width: 100%;
-				height: 100%;
-				display: flex;
-				background: #bbb;
-				overflow: hidden;				
-			}
-			.test{
-				width: 100px;
-				line-height: 100px;
+			html,body{
+				margin: 0;
+				padding: 0;
 				position: relative;
-				background-color: white;
-				text-align: center;
-				border-radius: 5px;
-				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-				transition: all 0.3s;
+				background-color: black;
+				color: #FFFFFF;
+			}			
+			#navugation{
+				position: relative;
+			}
+			#nav{
 				display: inline-block;
-				transform: scale(1.5);
-				margin: auto;
-				margin-top: 200px;
+				margin-top: 2px;
+				margin-left: 200px;
+				padding-left: 0;
 			}
-			.a:hover{
-				transform: scale(1.75);
-				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+			#nav li{
+				display: inline-block;
+				text-decoration: none;
 			}
-			.b::before{
-				content: "";
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
-				opacity: 0;
+			#nav li a{
+				opacity: .8;
+				text-decoration: none;
+				font-size: 13px;
+				vertical-align: middle;
+				line-height: 39px !important;
+				display: inline-block;
+				margin-left: 18px;
+				margin-right: 18px;
+				color: white;
 			}
-			.b:hover{
-				transform: scale(1.75);
-			}
-			.b:hover::before{
+			#nav li a:hover{
 				opacity: 1;
 			}
-			.c::after{
-				content: "";
-				border-radius: 5px;
+			#sign{
+				display: inline-block;
 				position: absolute;
-				z-index: -1;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				box-shadow: 0 16px 24px rgba(0, 0, 0, 0.7);
-				opacity: 0;
-			}
-			.c::before{
-				content: "";
-				border-radius: 5px;
-				position: absolute;
-				z-index: -1;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
-				opacity: 0;
-			}
-			.c:hover{
-				transform: scale(1.75);
-			}
-			.c:hover::before{
-				opacity: 0;
-			}
-			.c:hover::after{
-				opacity: 1;
-			}
-			@function shadowSet($vx, $vy) {
-			    $shadow : 0 0 0 0 #000;			     
-			    @for $i from 0 through 50 {
-			        $x: sin($i / 8) * $vx;
-			        $y: $i * $vy;			         
-			        $shadow: $shadow, #{$x} #{$y} 0 0 rgba(0, 0, 0, 1);
-			    } 
-			    @return $shadow;
-			}
-			#sin{
-				position: relative;
-				width: 1px;
-				height: 1px;
-				background: #000;
-				border-radius: 50%;
-				box-shadow: shadowSet(4px, 1px);
-				text-align: center;
+				line-height: 39px;
+				right: 300px;
+				font-size: 13px;
 			}
 		</style>
-		<div class="test a">
-			正常模式
+		<div class="wrapper">
+			<!-- 网页标题模块 -->
+			<header>
+				
+			</header>
+			<!-- 网页菜单模块 -->
+			<nav id="navugation">
+				<ul id="nav">
+					<li><a href="">Image</a></li>
+					<li><a href="">Videos</a></li>
+					<li><a href="">|</a></li>
+					<li><a href="">MSN</a></li>
+					<li><a href="">Office</a></li>
+					<li><a href="">Outlook.com</a></li>
+				</ul>
+				<div id="sign">
+					<span>Sign in</span>
+				</div>
+			</nav>
+			<!-- 网页信息模块 -->
+			<main id="content">
+				
+			</main>
+			<!-- 次要导航模块 -->
+			<aside>
+				
+			</aside>
+			<!-- 网页底部模块 -->
+			<footer>
+				
+			</footer>
 		</div>
-		<div class="test b">
-			优化后
-		</div>
-		<div class="test c">
-			最终
-		</div>
-		<div id="sin">
-			
-		</div>
-		<script src="js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
-			alert(navigator.userAgent);
-		</script>
 	</body>
 </html>
