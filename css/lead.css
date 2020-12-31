@@ -27,7 +27,8 @@ a:hover{
 	height:100%;
 	min-height: 100%;
 	background-attachment: fixed;
-	background:transparent url(https://i.loli.net/2020/10/05/H9zeGsK5D7OSCT6.jpg) center center no-repeat;
+	background:transparent url(../img/bg04.jpg) center center no-repeat;
+	/* background:transparent url(https://i.loli.net/2020/10/05/H9zeGsK5D7OSCT6.jpg) center center no-repeat; */
 	filter:blur(5px) brightness(0.7);
 	background-size:cover;
 	transform: scale(1);
@@ -80,6 +81,17 @@ a:hover{
 }
 #img img:hover{
 	transform: rotate(360deg);
+}
+#blog{
+	text-decoration: none;
+	transition: all .3s; 
+	color: skyblue;
+}
+#blog:visited{
+	color: skyblue;
+}
+#blog:hover{
+	color: red;
 }
 #top-l,#top-r{
 	width: 100px;
@@ -301,9 +313,15 @@ a:hover{
 	transition: all 0.5s;
 }
 @media only screen and (max-width:768px) {
+	#items{
+		width: 1000px;
+	}
+	#items ul li ul li{
+		padding: .2em;
+	}
 	.item{
-		width: 200px;
-		font-size: x-large;
+		width: 210px;
+		font-size: 1.5em;
 	}
 	#top{
 		width: 1000px;
@@ -323,6 +341,9 @@ a:hover{
 	text-decoration: none;
 	transition: all 0.3s;
 	color: white;
+}
+.item a:visited{
+	color: #dee482;
 }
 .item a:hover{
 	text-decoration: underline;
