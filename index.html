@@ -18,7 +18,7 @@
 		<div id="bg" class="swbg">
 			<div id="top">
 				<div id="img">
-					<img src="img/kasuie.png" alt="头像" title="点击切换背景">
+					<img src="img/kasuie.png" alt="头像" title="点击切换背景" onclick="swbg()">
 				</div>
 				<!-- <div id="top-l" style="text-align: center;line-height: 32px;">Pixiv Lips:</div> -->
 				<div id="top-r"></div>
@@ -215,7 +215,7 @@
 			let sw = Math.random();
 			var bg = $("#bg");
 			if(sw<=0.2){
-// 				swbg();
+				swbg();
 			}else if(sw>=0.9){
 				if(isMobile()){
 					bg.append("<style>#bg::before{background:transparent url(https://i.loli.net/2020/10/05/WwE2xe9QVIGdurS.jpg) center center no-repeat;background-size:cover;}</style>");
