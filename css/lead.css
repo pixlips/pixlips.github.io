@@ -27,8 +27,8 @@ a:hover{
 	height:100%;
 	min-height: 100%;
 	background-attachment: fixed;
-	background:transparent url(../img/bg04.jpg) center center no-repeat;
-	/* background:transparent url(https://i.loli.net/2020/10/05/H9zeGsK5D7OSCT6.jpg) center center no-repeat; */
+/* 	background:transparent url(../img/bg04.jpg) center center no-repeat; */
+	background:transparent url(https://i.loli.net/2020/10/05/H9zeGsK5D7OSCT6.jpg) center center no-repeat;
 	filter:blur(5px) brightness(0.7);
 	background-size:cover;
 	transform: scale(1);
